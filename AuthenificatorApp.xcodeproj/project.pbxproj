@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		790F6CD72A5191210088DFD5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790F6CD62A5191210088DFD5 /* AppDelegate.swift */; };
 		790F6CD92A5191210088DFD5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790F6CD82A5191210088DFD5 /* SceneDelegate.swift */; };
-		790F6CDB2A5191210088DFD5 /* MyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790F6CDA2A5191210088DFD5 /* MyViewController.swift */; };
+		790F6CDB2A5191210088DFD5 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790F6CDA2A5191210088DFD5 /* MainViewController.swift */; };
 		790F6CDE2A5191210088DFD5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 790F6CDC2A5191210088DFD5 /* Main.storyboard */; };
 		790F6CE02A5191230088DFD5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 790F6CDF2A5191230088DFD5 /* Assets.xcassets */; };
 		790F6CE32A5191230088DFD5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 790F6CE12A5191230088DFD5 /* LaunchScreen.storyboard */; };
@@ -18,13 +18,16 @@
 		790F6CEF2A5196510088DFD5 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790F6CEE2A5196510088DFD5 /* MainCoordinator.swift */; };
 		790F6CF12A52D0630088DFD5 /* BuyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790F6CF02A52D0630088DFD5 /* BuyViewController.swift */; };
 		790F6CF32A52D0720088DFD5 /* CreateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790F6CF22A52D0720088DFD5 /* CreateViewController.swift */; };
+		795A916A2A532026007B7AE2 /* CodeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 795A91682A532026007B7AE2 /* CodeCollectionViewCell.swift */; };
+		795A916B2A532026007B7AE2 /* CodeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 795A91692A532026007B7AE2 /* CodeCollectionViewCell.xib */; };
+		79B5D2952A53050B00F5E2E0 /* MainViewController+UICollectionViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B5D2942A53050B00F5E2E0 /* MainViewController+UICollectionViewDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		790F6CD32A5191210088DFD5 /* AuthenificatorApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AuthenificatorApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		790F6CD62A5191210088DFD5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		790F6CD82A5191210088DFD5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		790F6CDA2A5191210088DFD5 /* MyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyViewController.swift; sourceTree = "<group>"; };
+		790F6CDA2A5191210088DFD5 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		790F6CDD2A5191210088DFD5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		790F6CDF2A5191230088DFD5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		790F6CE22A5191230088DFD5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -34,6 +37,9 @@
 		790F6CEE2A5196510088DFD5 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 		790F6CF02A52D0630088DFD5 /* BuyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyViewController.swift; sourceTree = "<group>"; };
 		790F6CF22A52D0720088DFD5 /* CreateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateViewController.swift; sourceTree = "<group>"; };
+		795A91682A532026007B7AE2 /* CodeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CodeCollectionViewCell.swift; path = AuthenificatorApp/Views/CodeCollectionViewCell.swift; sourceTree = SOURCE_ROOT; };
+		795A91692A532026007B7AE2 /* CodeCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = CodeCollectionViewCell.xib; path = AuthenificatorApp/Views/CodeCollectionViewCell.xib; sourceTree = SOURCE_ROOT; };
+		79B5D2942A53050B00F5E2E0 /* MainViewController+UICollectionViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainViewController+UICollectionViewDelegate.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,11 +74,10 @@
 			children = (
 				79893DF62A52F8BB00D87895 /* App's Lifecycle */,
 				79893DF52A52F8AC00D87895 /* VCs */,
-				79893DF82A52F8EF00D87895 /* Coordinator's */,
+				79893DF82A52F8EF00D87895 /* Coordinators */,
 				79893DF72A52F8DE00D87895 /* Utilites */,
-				790F6CDC2A5191210088DFD5 /* Main.storyboard */,
+				79B5D29A2A53066C00F5E2E0 /* Views */,
 				790F6CDF2A5191230088DFD5 /* Assets.xcassets */,
-				790F6CE12A5191230088DFD5 /* LaunchScreen.storyboard */,
 				790F6CE42A5191230088DFD5 /* Info.plist */,
 			);
 			path = AuthenificatorApp;
@@ -81,7 +86,7 @@
 		79893DF52A52F8AC00D87895 /* VCs */ = {
 			isa = PBXGroup;
 			children = (
-				790F6CDA2A5191210088DFD5 /* MyViewController.swift */,
+				790F6CDA2A5191210088DFD5 /* MainViewController.swift */,
 				790F6CF02A52D0630088DFD5 /* BuyViewController.swift */,
 				790F6CF22A52D0720088DFD5 /* CreateViewController.swift */,
 			);
@@ -101,17 +106,29 @@
 			isa = PBXGroup;
 			children = (
 				790F6CEC2A5195FB0088DFD5 /* Storyboarded.swift */,
+				79B5D2942A53050B00F5E2E0 /* MainViewController+UICollectionViewDelegate.swift */,
 			);
 			path = Utilites;
 			sourceTree = "<group>";
 		};
-		79893DF82A52F8EF00D87895 /* Coordinator's */ = {
+		79893DF82A52F8EF00D87895 /* Coordinators */ = {
 			isa = PBXGroup;
 			children = (
 				790F6CEE2A5196510088DFD5 /* MainCoordinator.swift */,
 				790F6CEA2A5195320088DFD5 /* Coordinator.swift */,
 			);
-			path = "Coordinator's";
+			path = Coordinators;
+			sourceTree = "<group>";
+		};
+		79B5D29A2A53066C00F5E2E0 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				790F6CDC2A5191210088DFD5 /* Main.storyboard */,
+				795A91682A532026007B7AE2 /* CodeCollectionViewCell.swift */,
+				795A91692A532026007B7AE2 /* CodeCollectionViewCell.xib */,
+				790F6CE12A5191230088DFD5 /* LaunchScreen.storyboard */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -173,6 +190,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				790F6CE32A5191230088DFD5 /* LaunchScreen.storyboard in Resources */,
+				795A916B2A532026007B7AE2 /* CodeCollectionViewCell.xib in Resources */,
 				790F6CE02A5191230088DFD5 /* Assets.xcassets in Resources */,
 				790F6CDE2A5191210088DFD5 /* Main.storyboard in Resources */,
 			);
@@ -188,11 +206,13 @@
 				790F6CF32A52D0720088DFD5 /* CreateViewController.swift in Sources */,
 				790F6CEB2A5195320088DFD5 /* Coordinator.swift in Sources */,
 				790F6CEF2A5196510088DFD5 /* MainCoordinator.swift in Sources */,
-				790F6CDB2A5191210088DFD5 /* MyViewController.swift in Sources */,
+				790F6CDB2A5191210088DFD5 /* MainViewController.swift in Sources */,
 				790F6CED2A5195FB0088DFD5 /* Storyboarded.swift in Sources */,
+				795A916A2A532026007B7AE2 /* CodeCollectionViewCell.swift in Sources */,
 				790F6CD72A5191210088DFD5 /* AppDelegate.swift in Sources */,
 				790F6CF12A52D0630088DFD5 /* BuyViewController.swift in Sources */,
 				790F6CD92A5191210088DFD5 /* SceneDelegate.swift in Sources */,
+				79B5D2952A53050B00F5E2E0 /* MainViewController+UICollectionViewDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
