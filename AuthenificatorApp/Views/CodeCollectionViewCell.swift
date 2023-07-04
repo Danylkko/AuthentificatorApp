@@ -9,7 +9,7 @@ import UIKit
 
 class CodeCollectionViewCell: UICollectionViewCell {
     
-    public static let reuseId = "codeCell"
+    public static let reuseId = "CodeCellId"
 
     override func awakeFromNib() {
         super.awakeFromNib()

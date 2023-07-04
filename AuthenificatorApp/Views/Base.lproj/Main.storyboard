@@ -9,18 +9,18 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Buy View Controller-->
+        <!--Scanner View Controller-->
         <scene sceneID="BAr-Os-I4c">
             <objects>
-                <viewController storyboardIdentifier="BuyViewController" id="04P-6j-nAZ" customClass="BuyViewController" customModule="AuthenificatorApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="BuyViewController" id="04P-6j-nAZ" customClass="ScannerViewController" customModule="AuthenificatorApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="vMN-ey-9ck">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Buy" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Ck-Kt-qda">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Buy" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Ck-Kt-qda">
                                 <rect key="frame" x="175" y="416" width="30" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -85,17 +85,38 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VDE-o2-m6J" customClass="PrimaryUIButton" customModule="AuthenificatorApp" customModuleProvider="target">
+                                <rect key="frame" x="159" y="693" width="75" height="75"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="75" id="Btn-Xm-O91"/>
+                                    <constraint firstAttribute="height" constant="75" id="xRZ-rV-pk3"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="+">
+                                            <attributes>
+                                                <font key="NSFont" size="42" name="Poppins-Bold"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </buttonConfiguration>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6qO-yI-Yp3"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="0Fe-vG-gtP" firstAttribute="top" secondItem="6qO-yI-Yp3" secondAttribute="top" id="2aA-cO-O93"/>
+                            <constraint firstItem="6qO-yI-Yp3" firstAttribute="bottom" secondItem="VDE-o2-m6J" secondAttribute="bottom" constant="50" id="7x5-w4-db2"/>
                             <constraint firstItem="0Fe-vG-gtP" firstAttribute="leading" secondItem="6qO-yI-Yp3" secondAttribute="leading" id="EHZ-Q3-4Fq"/>
                             <constraint firstItem="6qO-yI-Yp3" firstAttribute="trailing" secondItem="0Fe-vG-gtP" secondAttribute="trailing" id="Hvu-hd-z6w"/>
+                            <constraint firstItem="VDE-o2-m6J" firstAttribute="centerX" secondItem="0Fe-vG-gtP" secondAttribute="centerX" id="QgV-BH-mql"/>
                             <constraint firstItem="6qO-yI-Yp3" firstAttribute="bottom" secondItem="0Fe-vG-gtP" secondAttribute="bottom" id="haJ-SU-Ltx"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="addNewCodeButton" destination="VDE-o2-m6J" id="l0K-n8-GHC"/>
                         <outlet property="codesCollectionView" destination="0Fe-vG-gtP" id="bRK-ZE-kaW"/>
                     </connections>
                 </viewController>

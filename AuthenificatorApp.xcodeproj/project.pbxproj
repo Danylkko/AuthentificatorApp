@@ -16,10 +16,15 @@
 		790F6CEB2A5195320088DFD5 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790F6CEA2A5195320088DFD5 /* Coordinator.swift */; };
 		790F6CED2A5195FB0088DFD5 /* Storyboarded.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790F6CEC2A5195FB0088DFD5 /* Storyboarded.swift */; };
 		790F6CEF2A5196510088DFD5 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790F6CEE2A5196510088DFD5 /* MainCoordinator.swift */; };
-		790F6CF12A52D0630088DFD5 /* BuyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790F6CF02A52D0630088DFD5 /* BuyViewController.swift */; };
+		790F6CF12A52D0630088DFD5 /* ScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790F6CF02A52D0630088DFD5 /* ScannerViewController.swift */; };
 		790F6CF32A52D0720088DFD5 /* CreateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790F6CF22A52D0720088DFD5 /* CreateViewController.swift */; };
 		795A916A2A532026007B7AE2 /* CodeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 795A91682A532026007B7AE2 /* CodeCollectionViewCell.swift */; };
 		795A916B2A532026007B7AE2 /* CodeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 795A91692A532026007B7AE2 /* CodeCollectionViewCell.xib */; };
+		796616EF2A54587100C4904E /* ScannerCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796616EE2A54587100C4904E /* ScannerCoordinator.swift */; };
+		799329482A5423BC00CA96F9 /* FooterCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 799329472A5423BC00CA96F9 /* FooterCollectionReusableView.swift */; };
+		7993294A2A54286100CA96F9 /* PrimaryUIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 799329492A54286100CA96F9 /* PrimaryUIButton.swift */; };
+		7993294D2A54393B00CA96F9 /* Poppins-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7993294B2A54393B00CA96F9 /* Poppins-Bold.ttf */; };
+		7993294E2A54393B00CA96F9 /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7993294C2A54393B00CA96F9 /* Poppins-Regular.ttf */; };
 		79B5D2952A53050B00F5E2E0 /* MainViewController+UICollectionViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B5D2942A53050B00F5E2E0 /* MainViewController+UICollectionViewDelegate.swift */; };
 /* End PBXBuildFile section */
 
@@ -35,10 +40,15 @@
 		790F6CEA2A5195320088DFD5 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		790F6CEC2A5195FB0088DFD5 /* Storyboarded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboarded.swift; sourceTree = "<group>"; };
 		790F6CEE2A5196510088DFD5 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
-		790F6CF02A52D0630088DFD5 /* BuyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyViewController.swift; sourceTree = "<group>"; };
+		790F6CF02A52D0630088DFD5 /* ScannerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerViewController.swift; sourceTree = "<group>"; };
 		790F6CF22A52D0720088DFD5 /* CreateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateViewController.swift; sourceTree = "<group>"; };
 		795A91682A532026007B7AE2 /* CodeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CodeCollectionViewCell.swift; path = AuthenificatorApp/Views/CodeCollectionViewCell.swift; sourceTree = SOURCE_ROOT; };
 		795A91692A532026007B7AE2 /* CodeCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = CodeCollectionViewCell.xib; path = AuthenificatorApp/Views/CodeCollectionViewCell.xib; sourceTree = SOURCE_ROOT; };
+		796616EE2A54587100C4904E /* ScannerCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerCoordinator.swift; sourceTree = "<group>"; };
+		799329472A5423BC00CA96F9 /* FooterCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FooterCollectionReusableView.swift; sourceTree = "<group>"; };
+		799329492A54286100CA96F9 /* PrimaryUIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryUIButton.swift; sourceTree = "<group>"; };
+		7993294B2A54393B00CA96F9 /* Poppins-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Bold.ttf"; sourceTree = "<group>"; };
+		7993294C2A54393B00CA96F9 /* Poppins-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Regular.ttf"; sourceTree = "<group>"; };
 		79B5D2942A53050B00F5E2E0 /* MainViewController+UICollectionViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainViewController+UICollectionViewDelegate.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -77,17 +87,27 @@
 				79893DF82A52F8EF00D87895 /* Coordinators */,
 				79893DF72A52F8DE00D87895 /* Utilites */,
 				79B5D29A2A53066C00F5E2E0 /* Views */,
+				796616ED2A543AED00C4904E /* Fonts */,
 				790F6CDF2A5191230088DFD5 /* Assets.xcassets */,
 				790F6CE42A5191230088DFD5 /* Info.plist */,
 			);
 			path = AuthenificatorApp;
 			sourceTree = "<group>";
 		};
+		796616ED2A543AED00C4904E /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				7993294B2A54393B00CA96F9 /* Poppins-Bold.ttf */,
+				7993294C2A54393B00CA96F9 /* Poppins-Regular.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 		79893DF52A52F8AC00D87895 /* VCs */ = {
 			isa = PBXGroup;
 			children = (
 				790F6CDA2A5191210088DFD5 /* MainViewController.swift */,
-				790F6CF02A52D0630088DFD5 /* BuyViewController.swift */,
+				790F6CF02A52D0630088DFD5 /* ScannerViewController.swift */,
 				790F6CF22A52D0720088DFD5 /* CreateViewController.swift */,
 			);
 			path = VCs;
@@ -115,6 +135,7 @@
 			isa = PBXGroup;
 			children = (
 				790F6CEE2A5196510088DFD5 /* MainCoordinator.swift */,
+				796616EE2A54587100C4904E /* ScannerCoordinator.swift */,
 				790F6CEA2A5195320088DFD5 /* Coordinator.swift */,
 			);
 			path = Coordinators;
@@ -126,7 +147,9 @@
 				790F6CDC2A5191210088DFD5 /* Main.storyboard */,
 				795A91682A532026007B7AE2 /* CodeCollectionViewCell.swift */,
 				795A91692A532026007B7AE2 /* CodeCollectionViewCell.xib */,
+				799329472A5423BC00CA96F9 /* FooterCollectionReusableView.swift */,
 				790F6CE12A5191230088DFD5 /* LaunchScreen.storyboard */,
+				799329492A54286100CA96F9 /* PrimaryUIButton.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -191,6 +214,8 @@
 			files = (
 				790F6CE32A5191230088DFD5 /* LaunchScreen.storyboard in Resources */,
 				795A916B2A532026007B7AE2 /* CodeCollectionViewCell.xib in Resources */,
+				7993294D2A54393B00CA96F9 /* Poppins-Bold.ttf in Resources */,
+				7993294E2A54393B00CA96F9 /* Poppins-Regular.ttf in Resources */,
 				790F6CE02A5191230088DFD5 /* Assets.xcassets in Resources */,
 				790F6CDE2A5191210088DFD5 /* Main.storyboard in Resources */,
 			);
@@ -205,12 +230,15 @@
 			files = (
 				790F6CF32A52D0720088DFD5 /* CreateViewController.swift in Sources */,
 				790F6CEB2A5195320088DFD5 /* Coordinator.swift in Sources */,
+				796616EF2A54587100C4904E /* ScannerCoordinator.swift in Sources */,
+				7993294A2A54286100CA96F9 /* PrimaryUIButton.swift in Sources */,
 				790F6CEF2A5196510088DFD5 /* MainCoordinator.swift in Sources */,
+				799329482A5423BC00CA96F9 /* FooterCollectionReusableView.swift in Sources */,
 				790F6CDB2A5191210088DFD5 /* MainViewController.swift in Sources */,
 				790F6CED2A5195FB0088DFD5 /* Storyboarded.swift in Sources */,
 				795A916A2A532026007B7AE2 /* CodeCollectionViewCell.swift in Sources */,
 				790F6CD72A5191210088DFD5 /* AppDelegate.swift in Sources */,
-				790F6CF12A52D0630088DFD5 /* BuyViewController.swift in Sources */,
+				790F6CF12A52D0630088DFD5 /* ScannerViewController.swift in Sources */,
 				790F6CD92A5191210088DFD5 /* SceneDelegate.swift in Sources */,
 				79B5D2952A53050B00F5E2E0 /* MainViewController+UICollectionViewDelegate.swift in Sources */,
 			);
@@ -362,6 +390,7 @@
 				DEVELOPMENT_TEAM = VNU8KKW4GG;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = AuthenificatorApp/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Please, allow access to camera to scan QR-codes";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
@@ -389,6 +418,7 @@
 				DEVELOPMENT_TEAM = VNU8KKW4GG;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = AuthenificatorApp/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Please, allow access to camera to scan QR-codes";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
