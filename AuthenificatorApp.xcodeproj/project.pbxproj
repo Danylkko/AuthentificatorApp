@@ -18,6 +18,7 @@
 		790F6CEF2A5196510088DFD5 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790F6CEE2A5196510088DFD5 /* MainCoordinator.swift */; };
 		790F6CF12A52D0630088DFD5 /* ScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790F6CF02A52D0630088DFD5 /* ScannerViewController.swift */; };
 		790F6CF32A52D0720088DFD5 /* CreateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790F6CF22A52D0720088DFD5 /* CreateViewController.swift */; };
+		79563E4D2A54D0D0004A867D /* QRFrameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79563E4C2A54D0D0004A867D /* QRFrameView.swift */; };
 		795A916A2A532026007B7AE2 /* CodeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 795A91682A532026007B7AE2 /* CodeCollectionViewCell.swift */; };
 		795A916B2A532026007B7AE2 /* CodeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 795A91692A532026007B7AE2 /* CodeCollectionViewCell.xib */; };
 		796616EF2A54587100C4904E /* ScannerCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796616EE2A54587100C4904E /* ScannerCoordinator.swift */; };
@@ -42,6 +43,7 @@
 		790F6CEE2A5196510088DFD5 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 		790F6CF02A52D0630088DFD5 /* ScannerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerViewController.swift; sourceTree = "<group>"; };
 		790F6CF22A52D0720088DFD5 /* CreateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateViewController.swift; sourceTree = "<group>"; };
+		79563E4C2A54D0D0004A867D /* QRFrameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRFrameView.swift; sourceTree = "<group>"; };
 		795A91682A532026007B7AE2 /* CodeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CodeCollectionViewCell.swift; path = AuthenificatorApp/Views/CodeCollectionViewCell.swift; sourceTree = SOURCE_ROOT; };
 		795A91692A532026007B7AE2 /* CodeCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = CodeCollectionViewCell.xib; path = AuthenificatorApp/Views/CodeCollectionViewCell.xib; sourceTree = SOURCE_ROOT; };
 		796616EE2A54587100C4904E /* ScannerCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerCoordinator.swift; sourceTree = "<group>"; };
@@ -150,6 +152,7 @@
 				799329472A5423BC00CA96F9 /* FooterCollectionReusableView.swift */,
 				790F6CE12A5191230088DFD5 /* LaunchScreen.storyboard */,
 				799329492A54286100CA96F9 /* PrimaryUIButton.swift */,
+				79563E4C2A54D0D0004A867D /* QRFrameView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -229,6 +232,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				790F6CF32A52D0720088DFD5 /* CreateViewController.swift in Sources */,
+				79563E4D2A54D0D0004A867D /* QRFrameView.swift in Sources */,
 				790F6CEB2A5195320088DFD5 /* Coordinator.swift in Sources */,
 				796616EF2A54587100C4904E /* ScannerCoordinator.swift in Sources */,
 				7993294A2A54286100CA96F9 /* PrimaryUIButton.swift in Sources */,

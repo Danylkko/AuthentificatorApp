@@ -52,10 +52,26 @@ class ScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
         previewLayer.frame = view.layer.bounds
         previewLayer.videoGravity = .resizeAspectFill
         view.layer.addSublayer(previewLayer)
+        
+        addQRFrame(at: view.layer.frame, for: view)
 
         DispatchQueue.global().async {
             self.captureSession.startRunning()
         }
+    }
+    
+    func addQRFrame(at frame: CGRect, for view: UIView) {
+        let sideSize: CGFloat = 155
+        let newOrigin = CGPoint(
+            x: frame.origin.x + (frame.width - sideSize) / 2,
+            y: frame.origin.y + (frame.height - sideSize) / 2
+        )
+        let newFrame = CGRect(
+            origin: newOrigin,
+            size: CGSize(width: sideSize, height: sideSize)
+        )
+        let qrFrameView = QRFrameView(frame: newFrame)
+        view.addSubview(qrFrameView)
     }
 
     func failed() {
