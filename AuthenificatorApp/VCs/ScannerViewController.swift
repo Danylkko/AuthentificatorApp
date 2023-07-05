@@ -9,8 +9,15 @@ import AVFoundation
 import UIKit
 
 class ScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate, Storyboarded {
+    
     var captureSession: AVCaptureSession!
     var previewLayer: AVCaptureVideoPreviewLayer!
+    
+    @IBOutlet private weak var barView: UIView!
+    @IBOutlet private weak var barLabel: UILabel!
+    @IBOutlet private weak var barDissmissImageButton: UIImageView!
+    @IBOutlet private weak var infoView: UIView!
+    @IBOutlet private weak var cameraView: UIView!
     
     weak var coordinator: ScannerCoordinator?
 
@@ -48,16 +55,49 @@ class ScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
             return
         }
 
-        previewLayer = AVCaptureVideoPreviewLayer(session: captureSession)
-        previewLayer.frame = view.layer.bounds
-        previewLayer.videoGravity = .resizeAspectFill
-        view.layer.addSublayer(previewLayer)
-        
-        addQRFrame(at: view.layer.frame, for: view)
-
         DispatchQueue.global().async {
             self.captureSession.startRunning()
         }
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        
+        previewLayer = AVCaptureVideoPreviewLayer(session: captureSession)
+        previewLayer.frame = cameraView.layer.bounds
+        previewLayer.videoGravity = .resizeAspectFill
+        cameraView.layer.addSublayer(previewLayer)
+        
+        addQRFrame(at: cameraView.layer.bounds, for: cameraView)
+        configureBar()
+        configureInfoView()
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        coordinator?.dismissScanner()
+    }
+    
+    func configureBar() {
+        barView.backgroundColor = .heavyGrey
+        
+        let barTitle = "Scan Code"
+        barLabel.text = barTitle
+        barLabel.font = UIFont(name: "Poppins-Regular", size: 24)
+        
+        let image = UIImage(systemName: "xmark.circle.fill")
+        barDissmissImageButton.image = image?.withTintColor(.lightGray, renderingMode: .alwaysOriginal)
+        barDissmissImageButton.isUserInteractionEnabled = true
+        let tap = UITapGestureRecognizer(target: self, action: #selector(dismissButtonTapped))
+        barDissmissImageButton.addGestureRecognizer(tap)
+    }
+    
+    @objc
+    func dismissButtonTapped() {
+        coordinator?.dismissScanner()
+    }
+    
+    func configureInfoView() {
+        infoView.backgroundColor = .black
     }
     
     func addQRFrame(at frame: CGRect, for view: UIView) {
@@ -75,8 +115,15 @@ class ScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
     }
 
     func failed() {
-        let ac = UIAlertController(title: "Scanning not supported", message: "Your device does not support scanning a code from an item. Please use a device with a camera.", preferredStyle: .alert)
-        ac.addAction(UIAlertAction(title: "OK", style: .default))
+        let ac = UIAlertController(
+            title: "Scanning not supported",
+            message: "Your device does not support scanning a code from an item. Please use a device with a camera.",
+            preferredStyle: .alert
+        )
+        ac.addAction(UIAlertAction(
+            title: "OK",
+            style: .default
+        ))
         present(ac, animated: true)
         captureSession = nil
     }
@@ -99,7 +146,9 @@ class ScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
         }
     }
 
-    func metadataOutput(_ output: AVCaptureMetadataOutput, didOutput metadataObjects: [AVMetadataObject], from connection: AVCaptureConnection) {
+    func metadataOutput(_ output: AVCaptureMetadataOutput,
+                        didOutput metadataObjects: [AVMetadataObject],
+                        from connection: AVCaptureConnection) {
         captureSession.stopRunning()
 
         if let metadataObject = metadataObjects.first {

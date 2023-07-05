@@ -17,8 +17,10 @@
 		790F6CED2A5195FB0088DFD5 /* Storyboarded.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790F6CEC2A5195FB0088DFD5 /* Storyboarded.swift */; };
 		790F6CEF2A5196510088DFD5 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790F6CEE2A5196510088DFD5 /* MainCoordinator.swift */; };
 		790F6CF12A52D0630088DFD5 /* ScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790F6CF02A52D0630088DFD5 /* ScannerViewController.swift */; };
-		790F6CF32A52D0720088DFD5 /* CreateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790F6CF22A52D0720088DFD5 /* CreateViewController.swift */; };
+		790F6CF32A52D0720088DFD5 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790F6CF22A52D0720088DFD5 /* CameraViewController.swift */; };
 		79563E4D2A54D0D0004A867D /* QRFrameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79563E4C2A54D0D0004A867D /* QRFrameView.swift */; };
+		79563E4F2A558F38004A867D /* UIColor+lightBlue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79563E4E2A558F38004A867D /* UIColor+lightBlue.swift */; };
+		79563E572A55F04D004A867D /* CameraCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79563E562A55F04D004A867D /* CameraCoordinator.swift */; };
 		795A916A2A532026007B7AE2 /* CodeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 795A91682A532026007B7AE2 /* CodeCollectionViewCell.swift */; };
 		795A916B2A532026007B7AE2 /* CodeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 795A91692A532026007B7AE2 /* CodeCollectionViewCell.xib */; };
 		796616EF2A54587100C4904E /* ScannerCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796616EE2A54587100C4904E /* ScannerCoordinator.swift */; };
@@ -42,8 +44,10 @@
 		790F6CEC2A5195FB0088DFD5 /* Storyboarded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboarded.swift; sourceTree = "<group>"; };
 		790F6CEE2A5196510088DFD5 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 		790F6CF02A52D0630088DFD5 /* ScannerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerViewController.swift; sourceTree = "<group>"; };
-		790F6CF22A52D0720088DFD5 /* CreateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateViewController.swift; sourceTree = "<group>"; };
+		790F6CF22A52D0720088DFD5 /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		79563E4C2A54D0D0004A867D /* QRFrameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRFrameView.swift; sourceTree = "<group>"; };
+		79563E4E2A558F38004A867D /* UIColor+lightBlue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+lightBlue.swift"; sourceTree = "<group>"; };
+		79563E562A55F04D004A867D /* CameraCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraCoordinator.swift; sourceTree = "<group>"; };
 		795A91682A532026007B7AE2 /* CodeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CodeCollectionViewCell.swift; path = AuthenificatorApp/Views/CodeCollectionViewCell.swift; sourceTree = SOURCE_ROOT; };
 		795A91692A532026007B7AE2 /* CodeCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = CodeCollectionViewCell.xib; path = AuthenificatorApp/Views/CodeCollectionViewCell.xib; sourceTree = SOURCE_ROOT; };
 		796616EE2A54587100C4904E /* ScannerCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerCoordinator.swift; sourceTree = "<group>"; };
@@ -110,7 +114,7 @@
 			children = (
 				790F6CDA2A5191210088DFD5 /* MainViewController.swift */,
 				790F6CF02A52D0630088DFD5 /* ScannerViewController.swift */,
-				790F6CF22A52D0720088DFD5 /* CreateViewController.swift */,
+				790F6CF22A52D0720088DFD5 /* CameraViewController.swift */,
 			);
 			path = VCs;
 			sourceTree = "<group>";
@@ -129,6 +133,7 @@
 			children = (
 				790F6CEC2A5195FB0088DFD5 /* Storyboarded.swift */,
 				79B5D2942A53050B00F5E2E0 /* MainViewController+UICollectionViewDelegate.swift */,
+				79563E4E2A558F38004A867D /* UIColor+lightBlue.swift */,
 			);
 			path = Utilites;
 			sourceTree = "<group>";
@@ -138,6 +143,7 @@
 			children = (
 				790F6CEE2A5196510088DFD5 /* MainCoordinator.swift */,
 				796616EE2A54587100C4904E /* ScannerCoordinator.swift */,
+				79563E562A55F04D004A867D /* CameraCoordinator.swift */,
 				790F6CEA2A5195320088DFD5 /* Coordinator.swift */,
 			);
 			path = Coordinators;
@@ -231,7 +237,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				790F6CF32A52D0720088DFD5 /* CreateViewController.swift in Sources */,
+				79563E4F2A558F38004A867D /* UIColor+lightBlue.swift in Sources */,
+				790F6CF32A52D0720088DFD5 /* CameraViewController.swift in Sources */,
 				79563E4D2A54D0D0004A867D /* QRFrameView.swift in Sources */,
 				790F6CEB2A5195320088DFD5 /* Coordinator.swift in Sources */,
 				796616EF2A54587100C4904E /* ScannerCoordinator.swift in Sources */,
@@ -245,6 +252,7 @@
 				790F6CF12A52D0630088DFD5 /* ScannerViewController.swift in Sources */,
 				790F6CD92A5191210088DFD5 /* SceneDelegate.swift in Sources */,
 				79B5D2952A53050B00F5E2E0 /* MainViewController+UICollectionViewDelegate.swift in Sources */,
+				79563E572A55F04D004A867D /* CameraCoordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

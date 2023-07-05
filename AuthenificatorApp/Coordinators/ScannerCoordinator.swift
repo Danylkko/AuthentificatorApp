@@ -9,7 +9,7 @@ import UIKit
 
 class ScannerCoordinator: Coordinator {
     
-    weak var parentCoordinator: MainCoordinator?
+    weak var parentCoordinator: Coordinator?
     var childCoordinators = [Coordinator]()
     var navigationController: UINavigationController
     
@@ -18,7 +18,8 @@ class ScannerCoordinator: Coordinator {
     }
     
     func start() {
-        let viewControllerToPresent = ScannerViewController()
+        let viewControllerToPresent = ScannerViewController.instantiate()
+        viewControllerToPresent.coordinator = self
         if let sheet = viewControllerToPresent.sheetPresentationController {
             sheet.detents = [.large()]
             sheet.largestUndimmedDetentIdentifier = .medium
@@ -27,6 +28,14 @@ class ScannerCoordinator: Coordinator {
             sheet.widthFollowsPreferredContentSizeWhenEdgeAttached = true
         }
         navigationController.present(viewControllerToPresent, animated: true, completion: nil)
+    }
+    
+    func dismissScanner() {
+        navigationController.dismiss(animated: true)
+    }
+    
+    func childDidFinish(_ child: Coordinator?) {
+        print("Child of ScannerCoordinator did finish!")
     }
     
 }

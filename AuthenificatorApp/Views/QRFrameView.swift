@@ -8,10 +8,6 @@
 import UIKit
 
 class QRFrameView: UIView {
-    
-    var lightBlueColor: UIColor {
-        UIColor(red: 19 / 255, green: 93 / 255, blue: 238 / 255, alpha: 1)
-    }
 
     // Only override draw() if you perform custom drawing.
     // An empty implementation adversely affects performance during animation.
@@ -20,7 +16,8 @@ class QRFrameView: UIView {
         let cornerPath = makeCornerPath(for: rect, cornerRadius: 30, angleSize: 20)
         
         cornerLayer.path = cornerPath.cgPath
-        cornerLayer.strokeColor = lightBlueColor.cgColor
+        cornerLayer.lineCap = .round
+        cornerLayer.strokeColor = UIColor.lightBlue.cgColor
         cornerLayer.lineWidth = 7
         cornerLayer.fillColor = UIColor.clear.cgColor
         layer.addSublayer(cornerLayer)

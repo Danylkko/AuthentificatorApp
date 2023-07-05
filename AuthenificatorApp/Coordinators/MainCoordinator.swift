@@ -25,6 +25,7 @@ class MainCoordinator: NSObject, Coordinator, UINavigationControllerDelegate {
     func scan() {
         let child = ScannerCoordinator(navigationController: navigationController)
         child.parentCoordinator = self
+        childCoordinators.append(child)
         child.start()
     }
     
@@ -52,4 +53,6 @@ class MainCoordinator: NSObject, Coordinator, UINavigationControllerDelegate {
             childDidFinish(scannerVC.coordinator)
         }
     }
+    
+    
 }

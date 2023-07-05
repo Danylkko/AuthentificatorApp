@@ -12,43 +12,83 @@
         <!--Scanner View Controller-->
         <scene sceneID="BAr-Os-I4c">
             <objects>
-                <viewController storyboardIdentifier="BuyViewController" id="04P-6j-nAZ" customClass="ScannerViewController" customModule="AuthenificatorApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ScannerViewController" id="04P-6j-nAZ" customClass="ScannerViewController" customModule="AuthenificatorApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="vMN-ey-9ck">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Buy" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Ck-Kt-qda">
-                                <rect key="frame" x="175" y="416" width="30" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7UB-R7-krG">
+                                <rect key="frame" x="0.0" y="59" width="393" height="65"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hha-3G-8Xp">
+                                        <rect key="frame" x="175.66666666666666" y="22" width="42" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="U5G-Yz-aaB">
+                                        <rect key="frame" x="349" y="20.666666666666671" width="24" height="24"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="24" id="eoP-Wl-uht"/>
+                                            <constraint firstAttribute="width" constant="24" id="s0d-uV-xbT"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="Hha-3G-8Xp" firstAttribute="centerX" secondItem="7UB-R7-krG" secondAttribute="centerX" id="HAh-3L-1L6"/>
+                                    <constraint firstAttribute="height" constant="65" id="Myc-6D-B1n"/>
+                                    <constraint firstAttribute="trailing" secondItem="U5G-Yz-aaB" secondAttribute="trailing" constant="20" symbolic="YES" id="TOY-mu-7aS"/>
+                                    <constraint firstItem="Hha-3G-8Xp" firstAttribute="centerY" secondItem="7UB-R7-krG" secondAttribute="centerY" id="bTN-4B-xz4"/>
+                                    <constraint firstItem="U5G-Yz-aaB" firstAttribute="centerY" secondItem="7UB-R7-krG" secondAttribute="centerY" id="sYr-lC-F4w"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wgs-82-55b">
+                                <rect key="frame" x="0.0" y="673" width="393" height="145"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="145" id="1uq-7X-XY6"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gd7-Pw-rtK">
+                                <rect key="frame" x="0.0" y="124" width="393" height="549"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="IjA-1P-YN9"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Wgs-82-55b" firstAttribute="bottom" secondItem="IjA-1P-YN9" secondAttribute="bottom" id="08j-PR-bjy"/>
+                            <constraint firstItem="gd7-Pw-rtK" firstAttribute="top" secondItem="7UB-R7-krG" secondAttribute="bottom" id="6kS-QQ-Yud"/>
+                            <constraint firstItem="IjA-1P-YN9" firstAttribute="trailing" secondItem="Wgs-82-55b" secondAttribute="trailing" id="EBr-Ab-VkB"/>
+                            <constraint firstItem="IjA-1P-YN9" firstAttribute="trailing" secondItem="gd7-Pw-rtK" secondAttribute="trailing" id="NiR-bA-358"/>
+                            <constraint firstItem="IjA-1P-YN9" firstAttribute="trailing" secondItem="7UB-R7-krG" secondAttribute="trailing" id="aTr-vu-11o"/>
+                            <constraint firstItem="Wgs-82-55b" firstAttribute="leading" secondItem="IjA-1P-YN9" secondAttribute="leading" id="dFf-SX-74o"/>
+                            <constraint firstItem="gd7-Pw-rtK" firstAttribute="leading" secondItem="IjA-1P-YN9" secondAttribute="leading" id="dji-rB-IRm"/>
+                            <constraint firstItem="7UB-R7-krG" firstAttribute="leading" secondItem="IjA-1P-YN9" secondAttribute="leading" id="gca-j3-xt6"/>
+                            <constraint firstItem="Wgs-82-55b" firstAttribute="top" secondItem="gd7-Pw-rtK" secondAttribute="bottom" id="id4-h9-nP1"/>
+                            <constraint firstItem="7UB-R7-krG" firstAttribute="top" secondItem="IjA-1P-YN9" secondAttribute="top" id="zxx-zc-tRp"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="barDissmissImageButton" destination="U5G-Yz-aaB" id="6gJ-bp-jdU"/>
+                        <outlet property="barLabel" destination="Hha-3G-8Xp" id="qJ1-ZH-Wz8"/>
+                        <outlet property="barView" destination="7UB-R7-krG" id="UNd-Bj-fKq"/>
+                        <outlet property="cameraView" destination="gd7-Pw-rtK" id="Ld6-eD-whv"/>
+                        <outlet property="infoView" destination="Wgs-82-55b" id="fzT-mW-noB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="puN-yy-Fr6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="835.87786259541986" y="-2.1126760563380285"/>
         </scene>
-        <!--Create View Controller-->
+        <!--Camera View Controller-->
         <scene sceneID="3Ml-Vy-PZA">
             <objects>
-                <viewController storyboardIdentifier="CreateViewController" id="TZe-0b-bbR" customClass="CreateViewController" customModule="AuthenificatorApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CameraViewController" id="TZe-0b-bbR" customClass="CameraViewController" customModule="AuthenificatorApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ae8-G5-x0c">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Create" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VZf-oj-K96">
-                                <rect key="frame" x="175" y="416" width="51" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
                         <viewLayoutGuide key="safeArea" id="bZW-MR-aBQ"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
