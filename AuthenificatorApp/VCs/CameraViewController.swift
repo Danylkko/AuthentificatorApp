@@ -8,12 +8,17 @@
 import UIKit
 import AVFoundation
 
-class CameraViewController: UIViewController, Storyboarded, AVCaptureMetadataOutputObjectsDelegate {
+protocol CameraViewControllerDelegate: AnyObject {
+    func cameraVCDidFoundQR(info: String)
+}
+
+class CameraViewController: UIViewController, Storyboarded, AVCaptureMetadataOutputObjectsDelegate, AVCaptureVideoDataOutputSampleBufferDelegate {
     
     var captureSession: AVCaptureSession!
     var previewLayer: AVCaptureVideoPreviewLayer!
     
     weak var coordinator: Coordinator?
+    weak var delegate: CameraViewControllerDelegate?
     
     override var prefersStatusBarHidden: Bool {
         return true
@@ -72,7 +77,7 @@ class CameraViewController: UIViewController, Storyboarded, AVCaptureMetadataOut
     }
     
     func found(code: String) {
-        print(code)
+        delegate?.cameraVCDidFoundQR(info: code)
     }
     
     func failed() {

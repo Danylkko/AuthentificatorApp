@@ -20,6 +20,8 @@ class QRFrameView: UIView {
         cornerLayer.strokeColor = UIColor.lightBlue.cgColor
         cornerLayer.lineWidth = 7
         cornerLayer.fillColor = UIColor.clear.cgColor
+        cornerLayer.shadowRadius = 2
+        cornerLayer.shadowOpacity = 0.4
         layer.addSublayer(cornerLayer)
     }
     

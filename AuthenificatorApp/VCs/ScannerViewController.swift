@@ -8,7 +8,12 @@
 import AVFoundation
 import UIKit
 
-class ScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate, Storyboarded {
+class ScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate, Storyboarded, CameraViewControllerDelegate {
+    
+    func cameraVCDidFoundQR(info: String) {
+        print(info)
+    }
+    
     
     @IBOutlet private weak var barView: UIView!
     @IBOutlet private weak var barLabel: UILabel!
@@ -25,6 +30,7 @@ class ScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        cameraVC?.delegate = self
         configureInfoView()
     }
     
