@@ -18,16 +18,17 @@ class ScannerCoordinator: Coordinator {
     }
     
     func start() {
-        let viewControllerToPresent = ScannerViewController.instantiate()
-        viewControllerToPresent.coordinator = self
-        if let sheet = viewControllerToPresent.sheetPresentationController {
+        let scannerViewController = ScannerViewController.instantiate()
+        scannerViewController.coordinator = self
+        scannerViewController.cameraVC = CameraViewController()
+        if let sheet = scannerViewController.sheetPresentationController {
             sheet.detents = [.large()]
             sheet.largestUndimmedDetentIdentifier = .medium
             sheet.prefersScrollingExpandsWhenScrolledToEdge = false
             sheet.prefersEdgeAttachedInCompactHeight = true
             sheet.widthFollowsPreferredContentSizeWhenEdgeAttached = true
         }
-        navigationController.present(viewControllerToPresent, animated: true, completion: nil)
+        navigationController.present(scannerViewController, animated: true, completion: nil)
     }
     
     func dismissScanner() {

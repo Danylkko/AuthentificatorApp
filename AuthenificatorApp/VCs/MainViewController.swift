@@ -11,7 +11,7 @@ class MainViewController: UIViewController, Storyboarded {
     
     weak var coordinator: MainCoordinator?
     @IBOutlet private weak var codesCollectionView: UICollectionView!
-    @IBOutlet private weak var addNewCodeButton: PrimaryUIButton!
+    @IBOutlet private weak var addNewCodeButton: AddNewItemButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,6 +28,7 @@ class MainViewController: UIViewController, Storyboarded {
     
     private func configureButtons() {
         addNewCodeButton.shape = .circle
+        addNewCodeButton.setTitle("+", for: .normal)
         addNewCodeButton.setNeedsDisplay()
         
         addNewCodeButton.addTarget(nil, action: #selector(scan), for: .touchUpInside)
