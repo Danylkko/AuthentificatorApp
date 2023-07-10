@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Combine
 
 class MainViewController: UIViewController, Storyboarded {
     
@@ -13,12 +14,28 @@ class MainViewController: UIViewController, Storyboarded {
     @IBOutlet private weak var codesCollectionView: UICollectionView!
     @IBOutlet private weak var addNewCodeButton: AddNewItemButton!
     
+    private(set) var userTokens = [DataManager.AuthToken]()
+    private var cn = Set<AnyCancellable>()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Authenticator+"
-        
         configureCodesCV()
         configureButtons()
+        configureCombine()
+    }
+    
+    private func configureCombine() {
+        DataManager.shared
+            .output.sink { [weak self] authTokens in
+                self?.userTokens = authTokens
+                DispatchQueue.main.async {
+                    self?.codesCollectionView.reloadData()
+                }
+            }.store(in: &cn)
+        
+        DataManager.shared
+            .fetchRecords.send()
     }
     
     @objc

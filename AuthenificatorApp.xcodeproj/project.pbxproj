@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		51077068908A7EC74635BA4B /* Pods_AuthenificatorApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 403F2EB5251317B276406DD7 /* Pods_AuthenificatorApp.framework */; };
 		790F6CD72A5191210088DFD5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790F6CD62A5191210088DFD5 /* AppDelegate.swift */; };
 		790F6CD92A5191210088DFD5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790F6CD82A5191210088DFD5 /* SceneDelegate.swift */; };
 		790F6CDB2A5191210088DFD5 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790F6CDA2A5191210088DFD5 /* MainViewController.swift */; };
@@ -31,9 +32,14 @@
 		7993294D2A54393B00CA96F9 /* Poppins-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7993294B2A54393B00CA96F9 /* Poppins-Bold.ttf */; };
 		7993294E2A54393B00CA96F9 /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7993294C2A54393B00CA96F9 /* Poppins-Regular.ttf */; };
 		79B5D2952A53050B00F5E2E0 /* MainViewController+UICollectionViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B5D2942A53050B00F5E2E0 /* MainViewController+UICollectionViewDelegate.swift */; };
+		79DDB6F42A59C42F00F694B0 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79DDB6F32A59C42F00F694B0 /* DataManager.swift */; };
+		79DDB6F62A5C425F00F694B0 /* CodeCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79DDB6F52A5C425F00F694B0 /* CodeCellViewModel.swift */; };
+		79DDB6F92A5C54C200F694B0 /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79DDB6F82A5C54C200F694B0 /* TimerView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		403F2EB5251317B276406DD7 /* Pods_AuthenificatorApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AuthenificatorApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5C52F230C5BB96E6C1A4D375 /* Pods-AuthenificatorApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AuthenificatorApp.release.xcconfig"; path = "Target Support Files/Pods-AuthenificatorApp/Pods-AuthenificatorApp.release.xcconfig"; sourceTree = "<group>"; };
 		790F6CD32A5191210088DFD5 /* AuthenificatorApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AuthenificatorApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		790F6CD62A5191210088DFD5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		790F6CD82A5191210088DFD5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -61,6 +67,10 @@
 		7993294B2A54393B00CA96F9 /* Poppins-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Bold.ttf"; sourceTree = "<group>"; };
 		7993294C2A54393B00CA96F9 /* Poppins-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Regular.ttf"; sourceTree = "<group>"; };
 		79B5D2942A53050B00F5E2E0 /* MainViewController+UICollectionViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainViewController+UICollectionViewDelegate.swift"; sourceTree = "<group>"; };
+		79DDB6F32A59C42F00F694B0 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		79DDB6F52A5C425F00F694B0 /* CodeCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeCellViewModel.swift; sourceTree = "<group>"; };
+		79DDB6F82A5C54C200F694B0 /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
+		A4A496335EE1F5E2D471B8DD /* Pods-AuthenificatorApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AuthenificatorApp.debug.xcconfig"; path = "Target Support Files/Pods-AuthenificatorApp/Pods-AuthenificatorApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,17 +78,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				51077068908A7EC74635BA4B /* Pods_AuthenificatorApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		24AA205670B0182937D24364 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				403F2EB5251317B276406DD7 /* Pods_AuthenificatorApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7905EC096F32526F9AE9AE7B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A4A496335EE1F5E2D471B8DD /* Pods-AuthenificatorApp.debug.xcconfig */,
+				5C52F230C5BB96E6C1A4D375 /* Pods-AuthenificatorApp.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		790F6CCA2A5191210088DFD5 = {
 			isa = PBXGroup;
 			children = (
 				790F6CD52A5191210088DFD5 /* AuthenificatorApp */,
 				790F6CD42A5191210088DFD5 /* Products */,
+				7905EC096F32526F9AE9AE7B /* Pods */,
+				24AA205670B0182937D24364 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -95,9 +125,10 @@
 			children = (
 				79893DF62A52F8BB00D87895 /* App's Lifecycle */,
 				79893DF52A52F8AC00D87895 /* VCs */,
+				79DDB6F72A5C426600F694B0 /* VMs */,
+				79B5D29A2A53066C00F5E2E0 /* Views */,
 				79893DF82A52F8EF00D87895 /* Coordinators */,
 				79893DF72A52F8DE00D87895 /* Utilites */,
-				79B5D29A2A53066C00F5E2E0 /* Views */,
 				796616ED2A543AED00C4904E /* Fonts */,
 				790F6CDF2A5191230088DFD5 /* Assets.xcassets */,
 				790F6CE42A5191230088DFD5 /* Info.plist */,
@@ -137,6 +168,7 @@
 		79893DF72A52F8DE00D87895 /* Utilites */ = {
 			isa = PBXGroup;
 			children = (
+				79DDB6F32A59C42F00F694B0 /* DataManager.swift */,
 				790F6CEC2A5195FB0088DFD5 /* Storyboarded.swift */,
 				79B5D2942A53050B00F5E2E0 /* MainViewController+UICollectionViewDelegate.swift */,
 				79563E4E2A558F38004A867D /* UIColor+lightBlue.swift */,
@@ -167,8 +199,17 @@
 				790F6CE12A5191230088DFD5 /* LaunchScreen.storyboard */,
 				799329492A54286100CA96F9 /* AddNewItemButton.swift */,
 				79563E4C2A54D0D0004A867D /* QRFrameView.swift */,
+				79DDB6F82A5C54C200F694B0 /* TimerView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		79DDB6F72A5C426600F694B0 /* VMs */ = {
+			isa = PBXGroup;
+			children = (
+				79DDB6F52A5C425F00F694B0 /* CodeCellViewModel.swift */,
+			);
+			path = VMs;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -178,9 +219,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 790F6CE72A5191230088DFD5 /* Build configuration list for PBXNativeTarget "AuthenificatorApp" */;
 			buildPhases = (
+				1B31512685266E92AB326EF3 /* [CP] Check Pods Manifest.lock */,
 				790F6CCF2A5191210088DFD5 /* Sources */,
 				790F6CD02A5191210088DFD5 /* Frameworks */,
 				790F6CD12A5191210088DFD5 /* Resources */,
+				D508033AD1A94B7893B2B811 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -240,12 +283,56 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1B31512685266E92AB326EF3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AuthenificatorApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D508033AD1A94B7893B2B811 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AuthenificatorApp/Pods-AuthenificatorApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AuthenificatorApp/Pods-AuthenificatorApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AuthenificatorApp/Pods-AuthenificatorApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		790F6CCF2A5191210088DFD5 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				79DDB6F92A5C54C200F694B0 /* TimerView.swift in Sources */,
 				79563E4F2A558F38004A867D /* UIColor+lightBlue.swift in Sources */,
+				79DDB6F42A59C42F00F694B0 /* DataManager.swift in Sources */,
 				790F6CF32A52D0720088DFD5 /* CameraViewController.swift in Sources */,
 				79563E592A55FB46004A867D /* String+UsingSystemFont.swift in Sources */,
 				79563E4D2A54D0D0004A867D /* QRFrameView.swift in Sources */,
@@ -261,6 +348,7 @@
 				790F6CD72A5191210088DFD5 /* AppDelegate.swift in Sources */,
 				790F6CF12A52D0630088DFD5 /* ScannerViewController.swift in Sources */,
 				790F6CD92A5191210088DFD5 /* SceneDelegate.swift in Sources */,
+				79DDB6F62A5C425F00F694B0 /* CodeCellViewModel.swift in Sources */,
 				79B5D2952A53050B00F5E2E0 /* MainViewController+UICollectionViewDelegate.swift in Sources */,
 				79563E572A55F04D004A867D /* CameraCoordinator.swift in Sources */,
 			);
@@ -404,6 +492,7 @@
 		};
 		790F6CE82A5191230088DFD5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A4A496335EE1F5E2D471B8DD /* Pods-AuthenificatorApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -412,6 +501,7 @@
 				DEVELOPMENT_TEAM = VNU8KKW4GG;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = AuthenificatorApp/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Authentificator+";
 				INFOPLIST_KEY_NSCameraUsageDescription = "Please, allow access to camera to scan QR-codes";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
@@ -432,6 +522,7 @@
 		};
 		790F6CE92A5191230088DFD5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5C52F230C5BB96E6C1A4D375 /* Pods-AuthenificatorApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -440,6 +531,7 @@
 				DEVELOPMENT_TEAM = VNU8KKW4GG;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = AuthenificatorApp/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Authentificator+";
 				INFOPLIST_KEY_NSCameraUsageDescription = "Please, allow access to camera to scan QR-codes";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;

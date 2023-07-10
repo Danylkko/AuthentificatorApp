@@ -4,20 +4,97 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MainViewController" customModule="AuthenificatorApp" customModuleProvider="target"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CodeCellId" id="gTV-IL-0wX" customClass="CodeCollectionViewCell" customModule="AuthenificatorApp" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+            <rect key="frame" x="0.0" y="0.0" width="376" height="67"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                <rect key="frame" x="0.0" y="0.0" width="376" height="67"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ew7-N1-ins">
+                        <rect key="frame" x="0.0" y="0.0" width="376" height="67"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6CO-Rk-std">
+                                <rect key="frame" x="20" y="16" width="35" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="Aeg-Se-xPD"/>
+                                    <constraint firstAttribute="width" constant="35" id="GJw-ct-isi"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c3a-bd-a9n">
+                                <rect key="frame" x="63" y="23" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Om-p0-5Mg">
+                                <rect key="frame" x="286" y="23" width="70" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="70" id="mxu-hd-SVk"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="elw-ah-PNf" customClass="TimerView" customModule="AuthenificatorApp" customModuleProvider="target">
+                                <rect key="frame" x="248" y="18.666666666666671" width="30" height="30"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9mt-I9-F8A">
+                                        <rect key="frame" x="11.666666666666686" y="7.6666666666666652" width="7" height="14.333333333333336"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="2Yb-Kr-DM8"/>
+                                    <constraint firstAttribute="width" constant="30" id="6qc-Lm-xec"/>
+                                    <constraint firstItem="9mt-I9-F8A" firstAttribute="centerY" secondItem="elw-ah-PNf" secondAttribute="centerY" id="RVk-Ii-bd3"/>
+                                    <constraint firstItem="9mt-I9-F8A" firstAttribute="centerX" secondItem="elw-ah-PNf" secondAttribute="centerX" id="tP6-Db-qF9"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="elw-ah-PNf" firstAttribute="centerY" secondItem="Ew7-N1-ins" secondAttribute="centerY" id="Fds-X8-dkC"/>
+                            <constraint firstItem="6CO-Rk-std" firstAttribute="centerY" secondItem="Ew7-N1-ins" secondAttribute="centerY" id="MFG-bp-mVJ"/>
+                            <constraint firstItem="1Om-p0-5Mg" firstAttribute="leading" secondItem="elw-ah-PNf" secondAttribute="trailing" constant="8" symbolic="YES" id="RJa-5P-Pdc"/>
+                            <constraint firstItem="6CO-Rk-std" firstAttribute="leading" secondItem="Ew7-N1-ins" secondAttribute="leading" constant="20" symbolic="YES" id="Wng-cA-HeY"/>
+                            <constraint firstItem="c3a-bd-a9n" firstAttribute="leading" secondItem="6CO-Rk-std" secondAttribute="trailing" constant="8" symbolic="YES" id="dah-T0-IGS"/>
+                            <constraint firstItem="1Om-p0-5Mg" firstAttribute="centerY" secondItem="Ew7-N1-ins" secondAttribute="centerY" id="dvq-Nb-0NZ"/>
+                            <constraint firstAttribute="trailing" secondItem="1Om-p0-5Mg" secondAttribute="trailing" constant="20" symbolic="YES" id="jVH-tY-Dmf"/>
+                            <constraint firstItem="c3a-bd-a9n" firstAttribute="centerY" secondItem="Ew7-N1-ins" secondAttribute="centerY" id="t71-Jr-h24"/>
+                        </constraints>
+                    </view>
+                </subviews>
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
-            <point key="canvasLocation" x="66" y="21"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="Ew7-N1-ins" secondAttribute="bottom" id="GFa-dj-zM4"/>
+                <constraint firstItem="Ew7-N1-ins" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="wEF-NB-ivf"/>
+                <constraint firstItem="Ew7-N1-ins" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="xoJ-bD-M4B"/>
+                <constraint firstAttribute="trailing" secondItem="Ew7-N1-ins" secondAttribute="trailing" id="ye3-Sa-tlX"/>
+            </constraints>
+            <size key="customSize" width="376" height="67"/>
+            <connections>
+                <outlet property="disposableCode" destination="1Om-p0-5Mg" id="Bl6-0g-Off"/>
+                <outlet property="issuerImageView" destination="6CO-Rk-std" id="uBS-0k-biG"/>
+                <outlet property="issuerName" destination="c3a-bd-a9n" id="wIi-co-4e5"/>
+                <outlet property="remainingTimeLabel" destination="9mt-I9-F8A" id="xin-r0-FGS"/>
+                <outlet property="timerView" destination="elw-ah-PNf" id="tOs-iU-Rb4"/>
+            </connections>
+            <point key="canvasLocation" x="314.50381679389312" y="26.408450704225352"/>
         </collectionViewCell>
     </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>

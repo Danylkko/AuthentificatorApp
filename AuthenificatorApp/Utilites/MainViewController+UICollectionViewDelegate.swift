@@ -11,18 +11,23 @@ import UIKit
 extension MainViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 8
+        userTokens.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let id = CodeCollectionViewCell.reuseId
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: id, for: indexPath)
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: id, for: indexPath) as? CodeCollectionViewCell else {
+            fatalError("Cell type mismatch!")
+        }
+        let token = userTokens[indexPath.row]
+        cell.configureCombine()
+        cell.vm.outSubject.send(token)
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        CGSize(width: (view.frame.size.width / 2) - 16,
-               height: (view.frame.size.width / 2) - 16)
+        CGSize(width: view.frame.size.width - 20,
+               height: 65)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {

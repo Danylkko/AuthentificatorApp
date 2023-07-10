@@ -6,12 +6,32 @@
 //
 
 import AVFoundation
+import OneTimePassword
 import UIKit
 
 class ScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate, Storyboarded, CameraViewControllerDelegate {
     
     func cameraVCDidFoundQR(info: String) {
-        print(info)
+        
+        guard let uri = URL(string: info), let _ = Token(url: uri) else {
+            let alert = UIAlertController(title: "An error occured.",
+                                          message: "Sorry. The scanned QR code cannot be processed.",
+                                          preferredStyle: .alert)
+            alert
+                .addAction(
+                    UIAlertAction(title: NSLocalizedString("OK", comment: "Default action"),
+                                  style: .default)
+                    { _ in
+                        self.coordinator?.dismissScanner()
+                        NSLog("The \"OK\" alert occured.")
+                    }
+                )
+            present(alert, animated: true, completion: nil)
+            return
+        }
+        
+        DataManager.shared.addRecord.send(uri)
+        coordinator?.dismissScanner()
     }
     
     
@@ -21,12 +41,12 @@ class ScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
     @IBOutlet private weak var infoView: UIView!
     @IBOutlet private weak var cameraView: UIView!
     
-    @IBOutlet weak var alternativeMethodButton: UIButton!
-    @IBOutlet weak var infoButton: UIButton!
+    @IBOutlet private weak var alternativeMethodButton: UIButton!
+    @IBOutlet private weak var infoButton: UIButton!
     
     weak var coordinator: ScannerCoordinator?
     var cameraVC: CameraViewController?
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
