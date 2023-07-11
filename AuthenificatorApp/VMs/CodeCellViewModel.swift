@@ -17,14 +17,21 @@ class CodeCellViewModel {
     init() {
         outSubject
             .sink { [weak self] token in
-                self?.scheduleUpdate(period: token.period, interval: 1.0)
+                self?.scheduleUpdate(for: token, interval: 1.0)
+            }.store(in: &cn)
+        
+        outTime
+            .filter { (0...1).contains($0) }
+            .sink { _ in
+                DataManager.shared.fetchRecords.send()
             }.store(in: &cn)
     }
     
-    func scheduleUpdate(period: TimeInterval, interval: TimeInterval) {
-        let timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { [weak self] timer in
+    func scheduleUpdate(for token: DataManager.AuthToken, interval: TimeInterval) {
+        let timer = Timer.scheduledTimer(withTimeInterval: interval, repeats: true) { [weak self] timer in
             let currentTime = Date().timeIntervalSince1970
-            let remainingTime = period - (currentTime.truncatingRemainder(dividingBy: period))
+            let remainingTime = token.period - (currentTime.truncatingRemainder(dividingBy: token.period))
+            
             self?.outTime.send(remainingTime)
         }
         timer.fire()

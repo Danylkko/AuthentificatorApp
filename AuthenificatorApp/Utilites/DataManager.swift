@@ -20,6 +20,13 @@ class DataManager {
     private var cn = Set<AnyCancellable>()
     
     init() {
+        
+//        try? keychain.allPersistentTokens().forEach { persToken in
+//            let identifier = persToken.identifier
+//            try? keychain.delete(persToken)
+//            print(try? self.keychain.allPersistentTokens().map(\.identifier).contains(identifier))
+//        }
+        
         fetchRecords
             .compactMap { [weak self] in
                 self?
