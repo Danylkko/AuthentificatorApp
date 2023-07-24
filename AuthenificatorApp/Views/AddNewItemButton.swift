@@ -11,14 +11,6 @@ class AddNewItemButton: UIButton {
     
     var shape: Shape?
     
-    override var isHighlighted: Bool {
-        didSet {
-            if isHighlighted {
-                backgroundColor = .cyan
-            }
-        }
-    }
-    
     override func draw(_ rect: CGRect) {
         if shape == .circle {
             layer.masksToBounds = true

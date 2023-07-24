@@ -38,11 +38,16 @@ class CodeCellViewModel {
     
     func scheduleUpdate(for token: DataManager.AuthToken, interval: TimeInterval) {
         updateTimer?.invalidate()
-        updateTimer = Timer.scheduledTimer(withTimeInterval: interval, repeats: true) { [weak self] timer in
-            let currentTime = Date().timeIntervalSince1970
-            let remainingTime = token.period - (currentTime.truncatingRemainder(dividingBy: token.period))
-            self?.outTime.send(remainingTime)
-        }
+        updateTimer = Timer(timeInterval: 1.0, target: self, selector: #selector(publishRemainingTime), userInfo: nil, repeats: true)
+        RunLoop.current.add(updateTimer!, forMode: .common)
         updateTimer?.fire()
+    }
+    
+    @objc
+    private func publishRemainingTime() {
+        guard let token = currentToken else { return }
+        let currentTime = Date().timeIntervalSince1970
+        let remainingTime = token.period - (currentTime.truncatingRemainder(dividingBy: token.period))
+        outTime.send(remainingTime)
     }
 }

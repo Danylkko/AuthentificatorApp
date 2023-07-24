@@ -72,7 +72,7 @@ class ScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
     }
     
     func configureBar() {
-        barView.backgroundColor = .heavyGrey
+        barView.backgroundColor = .tertiarySystemGroupedBackground
         
         let barTitle = "Scan Code"
         barLabel.text = barTitle
