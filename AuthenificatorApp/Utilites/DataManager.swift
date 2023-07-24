@@ -21,11 +21,11 @@ class DataManager {
     
     init() {
         
-//        try? keychain.allPersistentTokens().forEach { persToken in
-//            let identifier = persToken.identifier
-//            try? keychain.delete(persToken)
-//            print(try? self.keychain.allPersistentTokens().map(\.identifier).contains(identifier))
-//        }
+        //        try? keychain.allPersistentTokens().forEach { persToken in
+        //            let identifier = persToken.identifier
+        //            try? keychain.delete(persToken)
+        //            print(try? self.keychain.allPersistentTokens().map(\.identifier).contains(identifier))
+        //        }
         
         fetchRecords
             .compactMap { [weak self] in
@@ -33,6 +33,7 @@ class DataManager {
                     .fetchRecordsFromKeychain()
                     .map { AuthToken(token: $0) }
             }
+            .map { $0.sorted{$0.issuer < $1.issuer} }
             .sink { [weak self] tokens in
                 self?.output.send(tokens)
             }.store(in: &cn)
@@ -82,7 +83,8 @@ class DataManager {
         }
     }
     
-    struct AuthToken {
+    struct AuthToken: Equatable {
+        
         private let token: Token
         
         init(token: Token) {
@@ -108,6 +110,10 @@ class DataManager {
             case .counter:
                 return 0
             }
+        }
+        
+        static func == (lhs: Self, rhs: Self) -> Bool {
+            lhs.issuer == rhs.issuer && lhs.name == rhs.name
         }
     }
 }

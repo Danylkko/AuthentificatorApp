@@ -14,21 +14,29 @@ class CodeCollectionViewCell: UICollectionViewCell {
     let vm = CodeCellViewModel()
     private var cn = Set<AnyCancellable>()
     
+    @IBOutlet private weak var containerView: UIView!
     @IBOutlet private weak var issuerImageView: UIImageView!
     @IBOutlet private weak var issuerName: UILabel!
     @IBOutlet private weak var timerView: TimerView!
     @IBOutlet private weak var remainingTimeLabel: UILabel!
     @IBOutlet private weak var disposableCode: UILabel!
-
+    
     override func awakeFromNib() {
         super.awakeFromNib()
+        containerView.layer.backgroundColor = UIColor.systemGray2.cgColor
+        containerView.layer.cornerRadius = 10
     }
     
     func configureUI() {
-        remainingTimeLabel.textColor = .white
+        disposableCode.font = UIFont.customFont(size: UIFont.Constants.titleSize, weight: .bold)
+        issuerName.font = UIFont.customFont(size: UIFont.Constants.titleSize, weight: .bold)
+        remainingTimeLabel.font = UIFont.customFont(size: UIFont.Constants.hintSize, weight: .regular)
+        remainingTimeLabel.textColor = UIColor.lightBlue
     }
     
     func configureCombine() {
+        cn.removeAll()
+        
         vm.outSubject
             .map(\.issuer)
             .sink { [weak self] issuerName in
@@ -47,10 +55,11 @@ class CodeCollectionViewCell: UICollectionViewCell {
             .sink { [weak self] period, remainingTime in
                 self?.timerView.period = period
                 self?.timerView.remainingTime = remainingTime
+                self?.remainingTimeLabel.text = String(Int(remainingTime))
+                
                 DispatchQueue.main.async {
                     self?.timerView.setNeedsDisplay()
                 }
-                self?.remainingTimeLabel.text = String(Int(remainingTime))
             }.store(in: &cn)
     }
     

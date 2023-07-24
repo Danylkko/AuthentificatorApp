@@ -43,10 +43,10 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="elw-ah-PNf" customClass="TimerView" customModule="AuthenificatorApp" customModuleProvider="target">
-                                <rect key="frame" x="248" y="18.666666666666671" width="30" height="30"/>
+                                <rect key="frame" x="222.66666666666666" y="18.666666666666671" width="30" height="30"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9mt-I9-F8A">
-                                        <rect key="frame" x="11.666666666666686" y="7.6666666666666652" width="7" height="14.333333333333336"/>
+                                        <rect key="frame" x="11.666666666666686" y="7.6666666666666652" width="7" height="14.333333333333339"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -64,7 +64,7 @@
                         <constraints>
                             <constraint firstItem="elw-ah-PNf" firstAttribute="centerY" secondItem="Ew7-N1-ins" secondAttribute="centerY" id="Fds-X8-dkC"/>
                             <constraint firstItem="6CO-Rk-std" firstAttribute="centerY" secondItem="Ew7-N1-ins" secondAttribute="centerY" id="MFG-bp-mVJ"/>
-                            <constraint firstItem="1Om-p0-5Mg" firstAttribute="leading" secondItem="elw-ah-PNf" secondAttribute="trailing" constant="8" symbolic="YES" id="RJa-5P-Pdc"/>
+                            <constraint firstItem="1Om-p0-5Mg" firstAttribute="leading" secondItem="elw-ah-PNf" secondAttribute="trailing" multiplier="1.1" constant="8" symbolic="YES" id="RJa-5P-Pdc"/>
                             <constraint firstItem="6CO-Rk-std" firstAttribute="leading" secondItem="Ew7-N1-ins" secondAttribute="leading" constant="20" symbolic="YES" id="Wng-cA-HeY"/>
                             <constraint firstItem="c3a-bd-a9n" firstAttribute="leading" secondItem="6CO-Rk-std" secondAttribute="trailing" constant="8" symbolic="YES" id="dah-T0-IGS"/>
                             <constraint firstItem="1Om-p0-5Mg" firstAttribute="centerY" secondItem="Ew7-N1-ins" secondAttribute="centerY" id="dvq-Nb-0NZ"/>
@@ -83,6 +83,7 @@
             </constraints>
             <size key="customSize" width="376" height="67"/>
             <connections>
+                <outlet property="containerView" destination="Ew7-N1-ins" id="7Wt-aS-jwM"/>
                 <outlet property="disposableCode" destination="1Om-p0-5Mg" id="Bl6-0g-Off"/>
                 <outlet property="issuerImageView" destination="6CO-Rk-std" id="uBS-0k-biG"/>
                 <outlet property="issuerName" destination="c3a-bd-a9n" id="wIi-co-4e5"/>

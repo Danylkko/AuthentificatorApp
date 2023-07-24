@@ -63,6 +63,7 @@ class MainViewController: UIViewController, Storyboarded {
             forSupplementaryViewOfKind: UICollectionView.elementKindSectionFooter,
             withReuseIdentifier: FooterCollectionReusableView.reuseId
         )
+        codesCollectionView.alwaysBounceVertical = true
         codesCollectionView.dataSource = self
         codesCollectionView.delegate = self
     }

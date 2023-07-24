@@ -20,6 +20,7 @@ extension MainViewController: UICollectionViewDelegate, UICollectionViewDataSour
             fatalError("Cell type mismatch!")
         }
         let token = userTokens[indexPath.row]
+        cell.configureUI()
         cell.configureCombine()
         cell.vm.outSubject.send(token)
         return cell
