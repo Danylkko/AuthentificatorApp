@@ -23,7 +23,7 @@ class CodeCollectionViewCell: UICollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        containerView.layer.backgroundColor = UIColor.systemGray2.cgColor
+        containerView.layer.backgroundColor = UIColor.tertiarySystemGroupedBackground.cgColor
         containerView.layer.cornerRadius = 10
     }
     
@@ -46,7 +46,10 @@ class CodeCollectionViewCell: UICollectionViewCell {
         vm.outSubject
             .map(\.currentPassword)
             .sink { [weak self] currentPassword in
-                self?.disposableCode.text = currentPassword
+                guard var pass = currentPassword else { return }
+                let index = pass.index(pass.startIndex, offsetBy: 3)
+                pass.insert(contentsOf: "    ", at: index)
+                self?.disposableCode.text = pass
             }.store(in: &cn)
         
         vm.outSubject
