@@ -29,9 +29,14 @@ class CodeCollectionViewCell: UICollectionViewCell {
     
     func configureUI() {
         disposableCode.font = UIFont.customFont(size: UIFont.Constants.titleSize, weight: .bold)
+        
         issuerName.font = UIFont.customFont(size: UIFont.Constants.titleSize, weight: .bold)
+        
         remainingTimeLabel.font = UIFont.customFont(size: UIFont.Constants.hintSize, weight: .regular)
         remainingTimeLabel.textColor = UIColor.lightBlue
+        
+        issuerImageView.layer.cornerRadius = 10
+        issuerImageView.layer.backgroundColor = UIColor.white.cgColor
     }
     
     func configureCombine() {

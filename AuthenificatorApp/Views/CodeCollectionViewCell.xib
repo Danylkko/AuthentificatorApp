@@ -28,22 +28,28 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c3a-bd-a9n">
-                                <rect key="frame" x="63" y="23" width="42" height="21"/>
+                                <rect key="frame" x="75" y="23" width="41.333333333333343" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="150" id="h64-YV-XyP"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Om-p0-5Mg">
-                                <rect key="frame" x="314.66666666666669" y="23" width="41.333333333333314" height="21"/>
+                                <rect key="frame" x="281" y="23" width="75" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="75" id="Qxs-js-3vt"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="elw-ah-PNf" customClass="TimerView" customModule="AuthenificatorApp" customModuleProvider="target">
-                                <rect key="frame" x="248.66666666666663" y="18.666666666666671" width="30" height="30"/>
+                                <rect key="frame" x="218.33333333333334" y="18.666666666666671" width="30" height="30"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9mt-I9-F8A">
-                                        <rect key="frame" x="11.666666666666657" y="7.6666666666666652" width="7" height="14.333333333333339"/>
+                                        <rect key="frame" x="11.333333333333314" y="7.6666666666666652" width="7" height="14.333333333333339"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -63,7 +69,7 @@
                             <constraint firstItem="6CO-Rk-std" firstAttribute="centerY" secondItem="Ew7-N1-ins" secondAttribute="centerY" id="MFG-bp-mVJ"/>
                             <constraint firstItem="1Om-p0-5Mg" firstAttribute="leading" secondItem="elw-ah-PNf" secondAttribute="trailing" multiplier="1.1" constant="8" symbolic="YES" id="RJa-5P-Pdc"/>
                             <constraint firstItem="6CO-Rk-std" firstAttribute="leading" secondItem="Ew7-N1-ins" secondAttribute="leading" constant="20" symbolic="YES" id="Wng-cA-HeY"/>
-                            <constraint firstItem="c3a-bd-a9n" firstAttribute="leading" secondItem="6CO-Rk-std" secondAttribute="trailing" constant="8" symbolic="YES" id="dah-T0-IGS"/>
+                            <constraint firstItem="c3a-bd-a9n" firstAttribute="leading" secondItem="6CO-Rk-std" secondAttribute="trailing" constant="20" id="dah-T0-IGS"/>
                             <constraint firstItem="1Om-p0-5Mg" firstAttribute="centerY" secondItem="Ew7-N1-ins" secondAttribute="centerY" id="dvq-Nb-0NZ"/>
                             <constraint firstAttribute="trailing" secondItem="1Om-p0-5Mg" secondAttribute="trailing" constant="20" symbolic="YES" id="jVH-tY-Dmf"/>
                             <constraint firstItem="c3a-bd-a9n" firstAttribute="centerY" secondItem="Ew7-N1-ins" secondAttribute="centerY" id="t71-Jr-h24"/>
