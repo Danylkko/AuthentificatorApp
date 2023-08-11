@@ -20,15 +20,22 @@ class CodeCellViewModel {
     
     init() {
         outSubject
+            .filter { [weak self] token in self?.currentToken != token }
             .sink { [weak self] token in
-                if self?.currentToken != token {
-                    self?.currentToken = token
-                    self?.scheduleUpdate(for: token, interval: 1.0)
-                }
+                self?.currentToken = token
+            }
+            .store(in: &cn)
+        
+        CentralTimer
+            .shared
+            .firePublisher
+            .sink { [weak self] _ in
+                guard let self, let token = self.currentToken else { return }
+                let remainingTime = self.computeRemainingTime(period: token.period)
+                self.outTime.send(remainingTime)
             }.store(in: &cn)
         
         outTime
-            .filter { (28...30).contains($0) }
             .sink { [weak self] _ in
                 guard let token = self?.currentToken else { return }
                 self?.outSubject.send(token)
@@ -36,18 +43,10 @@ class CodeCellViewModel {
         
     }
     
-    func scheduleUpdate(for token: DataManager.AuthToken, interval: TimeInterval) {
-        updateTimer?.invalidate()
-        updateTimer = Timer(timeInterval: 1.0, target: self, selector: #selector(publishRemainingTime), userInfo: nil, repeats: true)
-        RunLoop.current.add(updateTimer!, forMode: .common)
-        updateTimer?.fire()
+    private func computeRemainingTime(period: Double) -> Double {
+        let currentDate = Date().timeIntervalSince1970
+        let remainingTime = period - (currentDate.truncatingRemainder(dividingBy: period))
+        return remainingTime
     }
     
-    @objc
-    private func publishRemainingTime() {
-        guard let token = currentToken else { return }
-        let currentTime = Date().timeIntervalSince1970
-        let remainingTime = token.period - (currentTime.truncatingRemainder(dividingBy: token.period))
-        outTime.send(remainingTime)
-    }
 }

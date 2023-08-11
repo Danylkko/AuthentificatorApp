@@ -31,6 +31,7 @@
 		7993294A2A54286100CA96F9 /* AddNewItemButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 799329492A54286100CA96F9 /* AddNewItemButton.swift */; };
 		7993294D2A54393B00CA96F9 /* Poppins-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7993294B2A54393B00CA96F9 /* Poppins-Bold.ttf */; };
 		7993294E2A54393B00CA96F9 /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7993294C2A54393B00CA96F9 /* Poppins-Regular.ttf */; };
+		79AE90BD2A82A5CE009EE153 /* CentralTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79AE90BC2A82A5CE009EE153 /* CentralTimer.swift */; };
 		79B5D2952A53050B00F5E2E0 /* MainViewController+UICollectionViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B5D2942A53050B00F5E2E0 /* MainViewController+UICollectionViewDelegate.swift */; };
 		79DDB6F42A59C42F00F694B0 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79DDB6F32A59C42F00F694B0 /* DataManager.swift */; };
 		79DDB6F62A5C425F00F694B0 /* CodeCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79DDB6F52A5C425F00F694B0 /* CodeCellViewModel.swift */; };
@@ -66,6 +67,8 @@
 		799329492A54286100CA96F9 /* AddNewItemButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewItemButton.swift; sourceTree = "<group>"; };
 		7993294B2A54393B00CA96F9 /* Poppins-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Bold.ttf"; sourceTree = "<group>"; };
 		7993294C2A54393B00CA96F9 /* Poppins-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Regular.ttf"; sourceTree = "<group>"; };
+		79AE90BC2A82A5CE009EE153 /* CentralTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CentralTimer.swift; sourceTree = "<group>"; };
+		79AE90BE2A8537A2009EE153 /* AuthenificatorApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AuthenificatorApp.entitlements; sourceTree = "<group>"; };
 		79B5D2942A53050B00F5E2E0 /* MainViewController+UICollectionViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainViewController+UICollectionViewDelegate.swift"; sourceTree = "<group>"; };
 		79DDB6F32A59C42F00F694B0 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		79DDB6F52A5C425F00F694B0 /* CodeCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeCellViewModel.swift; sourceTree = "<group>"; };
@@ -123,6 +126,7 @@
 		790F6CD52A5191210088DFD5 /* AuthenificatorApp */ = {
 			isa = PBXGroup;
 			children = (
+				79AE90BE2A8537A2009EE153 /* AuthenificatorApp.entitlements */,
 				79893DF62A52F8BB00D87895 /* App's Lifecycle */,
 				79893DF52A52F8AC00D87895 /* VCs */,
 				79DDB6F72A5C426600F694B0 /* VMs */,
@@ -174,6 +178,7 @@
 				79563E4E2A558F38004A867D /* UIColor+lightBlue.swift */,
 				79563E582A55FB46004A867D /* String+UsingSystemFont.swift */,
 				79563E5A2A56F09E004A867D /* UIFont+SystemFont.swift */,
+				79AE90BC2A82A5CE009EE153 /* CentralTimer.swift */,
 			);
 			path = Utilites;
 			sourceTree = "<group>";
@@ -343,6 +348,7 @@
 				799329482A5423BC00CA96F9 /* FooterCollectionReusableView.swift in Sources */,
 				790F6CDB2A5191210088DFD5 /* MainViewController.swift in Sources */,
 				790F6CED2A5195FB0088DFD5 /* Storyboarded.swift in Sources */,
+				79AE90BD2A82A5CE009EE153 /* CentralTimer.swift in Sources */,
 				795A916A2A532026007B7AE2 /* CodeCollectionViewCell.swift in Sources */,
 				79563E5B2A56F09E004A867D /* UIFont+SystemFont.swift in Sources */,
 				790F6CD72A5191210088DFD5 /* AppDelegate.swift in Sources */,
@@ -496,6 +502,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = AuthenificatorApp/AuthenificatorApp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 5292W974W2;
@@ -526,6 +533,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = AuthenificatorApp/AuthenificatorApp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 5292W974W2;

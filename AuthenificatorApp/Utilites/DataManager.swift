@@ -9,7 +9,7 @@ import Foundation
 import OneTimePassword
 import Combine
 
-class DataManager {
+final class DataManager {
     
     public static let shared = DataManager()
     private let keychain = Keychain.sharedInstance
